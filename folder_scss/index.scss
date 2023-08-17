@@ -14,6 +14,14 @@ body {
     background: $color_navbar_button;
 }
 
+.text_size_35 {
+    font-size: $text_title_cards;
+}
+
+.text_height {
+    line-height: 29px;
+}
+
 // end everything
 // start navbar
 body .section_navbar {
@@ -145,10 +153,6 @@ body .section_main .section_main_scroll_button {
 
 // end main
 // start card
-body main section .container .div_card div div .text_size_35 {
-    font-size: $text_title_cards;
-}
-
 body main section .container .div_card:nth-child(odd) {
     background-color: $color_card_coupons;
 }
@@ -204,6 +208,86 @@ body main section .container .div_card:nth-child(2):hover .image_hover_none {
 }
 
 // end card
+// start check
+body main section .container .div_check {
+    background-color: $color_card_certified;
+}
+
+.text_color {
+    font-size: 18px;
+    color: $color_navbar_button;
+}
+
+// end check
+// start form condition
+body main section .container form .row div div input,
+body main section .container form .row div div textarea {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+body main section .container form .row div div input:focus+.span_red,
+body main section .container form .row div div input:focus+.placeholder_star,
+body main section .container form .row div div textarea:focus+.span_red,
+body main section .container form .row div div textarea:focus+.placeholder_star_text {
+    font-size: 12px;
+    top: 0;
+}
+
+body main section .container form .row div div .placeholder_star_text,
+body main section .container form .row div div .placeholder_star,
+body main section .container form .row div div .span_red {
+    color: $color_form;
+    z-index: -1;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+body main section .container form .row div div .placeholder_star {
+    top: 25%;
+    left: 15px;
+}
+
+body main section .container form .row div div .placeholder_star_text {
+    top: 10%;
+    left: 15px;
+}
+
+body main section .container form .row div div .span_red {
+    color: $color_red !important;
+}
+
+body main section .container form .row div div textarea {
+    resize: none;
+    height: 155px;
+}
+
+body main section .container form .row .div_hr {
+    background-color: $color_line;
+    width: 98%;
+    height: 1px;
+}
+
+body main section .container form div .div_hover input[type=submit] {
+    width: 194px;
+    height: 56px;
+    font-size: 18px;
+    background-color: $color_navbar_button;
+    transition: 0.3s;
+}
+
+body main section .container form div .div_hover input[type=submit]:hover {
+    background-color: $color_black;
+}
+
+// end form condition
+// start footer
+.ul_footer {
+    color: $color_navbar_button;
+    font-size: $text_navbar;
+}
+
+// end footer
 // start media
 @media (max-width: 990px) {
     body .section_navbar nav .container a .logo_media {

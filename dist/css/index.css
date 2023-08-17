@@ -10,6 +10,14 @@ body {
   background: #0099A8;
 }
 
+.text_size_35 {
+  font-size: 35px;
+}
+
+.text_height {
+  line-height: 29px;
+}
+
 body .section_navbar {
   z-index: 1;
   background: linear-gradient(-180deg, #3a3a3a, rgba(0, 0, 0, 0));
@@ -35,7 +43,7 @@ body .section_navbar nav .container button .menu {
 }
 
 body .section_navbar nav .container .navbar-toggler:focus {
-  box-shadow: 0 0 0 #AFE2E3;
+  box-shadow: 0 0 0 rgba(175, 226, 227, 0.7254901961);
 }
 
 body .section_navbar .navbar .container div ul li .text_hover_black {
@@ -135,16 +143,12 @@ body .section_main .section_main_scroll_button {
   transform: translate(-50px, 0);
 }
 
-body main section .container .div_card div div .text_size_35 {
-  font-size: 35px;
-}
-
 body main section .container .div_card:nth-child(odd) {
-  background-color: #AFE2E3;
+  background-color: rgba(175, 226, 227, 0.7254901961);
 }
 
 body main section .container .div_card:nth-child(even) {
-  background-color: #EBEBEB;
+  background-color: rgba(175, 226, 227, 0.3098039216);
   flex-direction: row-reverse;
 }
 
@@ -191,6 +195,80 @@ body main section .container .div_card:nth-child(2):hover .image_hover_block {
 
 body main section .container .div_card:nth-child(2):hover .image_hover_none {
   opacity: 0;
+}
+
+body main section .container .div_check {
+  background-color: rgba(175, 226, 227, 0.3098039216);
+}
+
+.text_color {
+  font-size: 18px;
+  color: #0099A8;
+}
+
+body main section .container form .row div div input,
+body main section .container form .row div div textarea {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+body main section .container form .row div div input:focus + .span_red,
+body main section .container form .row div div input:focus + .placeholder_star,
+body main section .container form .row div div textarea:focus + .span_red,
+body main section .container form .row div div textarea:focus + .placeholder_star_text {
+  font-size: 12px;
+  top: 0;
+}
+
+body main section .container form .row div div .placeholder_star_text,
+body main section .container form .row div div .placeholder_star,
+body main section .container form .row div div .span_red {
+  color: #828699;
+  z-index: -1;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+body main section .container form .row div div .placeholder_star {
+  top: 25%;
+  left: 15px;
+}
+
+body main section .container form .row div div .placeholder_star_text {
+  top: 10%;
+  left: 15px;
+}
+
+body main section .container form .row div div .span_red {
+  color: red !important;
+}
+
+body main section .container form .row div div textarea {
+  resize: none;
+  height: 155px;
+}
+
+body main section .container form .row .div_hr {
+  background-color: #D8D8D8;
+  width: 98%;
+  height: 1px;
+}
+
+body main section .container form div .div_hover input[type=submit] {
+  width: 194px;
+  height: 56px;
+  font-size: 18px;
+  background-color: #0099A8;
+  transition: 0.3s;
+}
+
+body main section .container form div .div_hover input[type=submit]:hover {
+  background-color: black;
+}
+
+.ul_footer {
+  color: #0099A8;
+  font-size: 16px;
 }
 
 @media (max-width: 990px) {
