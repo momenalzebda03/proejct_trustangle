@@ -1,0 +1,277 @@
+@import "color";
+@import "size_text";
+
+// start everything
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color_navbar_button;
+}
+
+// end everything
+// start navbar
+body .section_navbar {
+    z-index: 1;
+    background: linear-gradient(-180deg, $color_navbar_top, $color_navbar_bottom);
+}
+
+body .section_navbar .navbar .container div .button_language {
+    background-color: $color_navbar_button;
+    width: 109px;
+    height: 48px;
+    transition: 0.3s;
+}
+
+body .section_navbar .navbar .container div .button_language:hover {
+    background-color: $color_black;
+}
+
+body .section_navbar .navbar .container div ul li .text_hover:hover {
+    color: $color_navbar_button !important;
+}
+
+body .section_navbar nav .container button .menu {
+    color: $color_white;
+}
+
+body .section_navbar nav .container .navbar-toggler:focus {
+    box-shadow: 0 0 0 $color_card_coupons;
+}
+
+body .section_navbar .navbar .container div ul li .text_hover_black {
+    color: $color_black !important;
+}
+
+body .section_navbar .navbar .container div ul li .active {
+    color: $color_navbar_button !important;
+}
+
+// end navbar
+// start main
+body .section_main {
+    content: "";
+    background: url("/images/image_main/image_background.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+body .section_main .container .row div div .div_title {
+    width: 453px;
+    height: 46px;
+    background-color: #ffffff33;
+}
+
+body .section_main .container .row div div div .title_size_tow {
+    font-size: $text_title;
+}
+
+body .section_main .container .row div div div .button_start {
+    background-color: $color_navbar_button;
+    width: 162.46px;
+    height: 48px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border: 3px solid $color_main;
+    outline: 1px solid $color_white;
+    transition: 0.5s;
+}
+
+body .section_main .container .row div div div .button_start::before,
+body .section_main .container .row div div div .button_start::after {
+    content: "";
+    position: absolute;
+    background-color: $color_main;
+    width: 2.5px;
+    height: 10px;
+    transition: 0.5s;
+}
+
+body .section_main .container .row div div div .button_start::before {
+    right: -4px;
+}
+
+body .section_main .container .row div div div .button_start::after {
+    left: -4px;
+}
+
+body .section_main .container .row div div div .link_div::after {
+    content: "GET STARTED";
+    font-size: 0;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    top: 40px;
+    right: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+body .section_main .container .row div div .button_start:hover .link_div::after {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    font-size: 18px;
+    opacity: 1;
+}
+
+body .section_main .container .row div div .button_start:hover::before,
+body .section_main .container .row div div .button_start:hover::after {
+    height: 0px;
+}
+
+body .section_main .container .row div div .image_mix {
+    mix-blend-mode: screen;
+}
+
+body .section_main .section_main_scroll_button {
+    cursor: pointer;
+    bottom: -30px;
+    box-shadow: 0 5px 5px 0 #ccc;
+    width: 77px;
+    height: 77px;
+    transform: translate(-50px, 0);
+}
+
+// end main
+// start card
+body main section .container .div_card div div .text_size_35 {
+    font-size: $text_title_cards;
+}
+
+body main section .container .div_card:nth-child(odd) {
+    background-color: $color_card_coupons;
+}
+
+body main section .container .div_card:nth-child(even) {
+    background-color: $color_card_certified;
+    flex-direction: row-reverse;
+}
+
+body main section .container .div_card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: $color_white;
+    width: 70px;
+    height: 70px;
+}
+
+body main section .container .div_card:nth-child(odd)::before {
+    left: -35px;
+    transform: skewX(45deg);
+}
+
+body main section .container .div_card:nth-child(even)::before {
+    right: -35px;
+    transform: skewX(-45deg);
+}
+
+body main section .container .div_card div div .image_hover {
+    transition: transform 0.5s ease-in-out;
+}
+
+body main section .container .div_card:hover .image_hover {
+    transform: scale(1.1);
+}
+
+body main section .container .div_card:nth-child(2) .image_hover_block,
+body main section .container .div_card:nth-child(2) .image_hover_none {
+    transition: 1s;
+    transform: scale(1);
+}
+
+body main section .container .div_card:nth-child(2) .image_hover_block {
+    opacity: 0;
+}
+
+body main section .container .div_card:nth-child(2):hover .image_hover_block {
+    opacity: 1;
+}
+
+body main section .container .div_card:nth-child(2):hover .image_hover_none {
+    opacity: 0;
+}
+
+// end card
+// start media
+@media (max-width: 990px) {
+    body .section_navbar nav .container a .logo_media {
+        width: 131px;
+        height: 55px;
+    }
+
+    body .section_navbar .navbar .container div ul li .text_hover {
+        color: $color_black !important;
+    }
+
+    body .section_navbar nav .container .div_media {
+        background-color: $color_white;
+    }
+
+    body .section_main {
+        padding-top: 100px;
+        height: 52vh;
+    }
+
+    body .section_main .container .row div div .div_title .title_size {
+        font-size: 14px !important;
+    }
+
+    body .section_main .container .row div div .div_title {
+        width: 316px;
+        height: 31px;
+    }
+
+    body .section_main .container .row div div div .title_size_tow {
+        font-size: $text_title_cards;
+    }
+
+    body .section_main .container .row div div div .button_start {
+        width: 130px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    body main section .container .div_card::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background-color: $color_white;
+        width: 70px;
+        height: 70px;
+    }
+
+    body main section .container .div_card:nth-child(even)::before,
+    body main section .container .div_card:nth-child(odd)::before {
+        left: -80px;
+        transform: skewX(45deg);
+    }
+}
+
+@media (max-width: 300px) {
+    body .section_main .container .row div div .div_title .title_size {
+        font-size: 10px !important;
+    }
+
+    body .section_main .container .row div div .div_title {
+        width: 256px;
+        height: 31px;
+    }
+
+    body .section_main .container .row div div div .title_size_tow {
+        font-size: 25px;
+    }
+}
+
+// end media
