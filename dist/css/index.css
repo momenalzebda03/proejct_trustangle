@@ -18,6 +18,39 @@ body {
   line-height: 29px;
 }
 
+:root {
+  --width: 139px;
+  --height: 78px;
+}
+
+.button {
+  width: calc(0.8 * var(--width));
+  height: calc(0.7 * var(--height));
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0, 0.22, 0.3, 1);
+}
+.button span {
+  z-index: 10;
+}
+.button._3 {
+  background: #0099A8;
+}
+.button .back {
+  width: 0;
+  height: 0;
+  filter: url(#filter);
+  transition: all 2.5s cubic-bezier(0.1, 0.22, 0.3, 1);
+}
+.button._3 .back {
+  left: -50%;
+  bottom: -50%;
+  background: black;
+}
+.button:hover .back {
+  width: calc(2 * var(--width));
+  height: calc(2 * var(--height));
+}
+
 body .section_navbar {
   z-index: 1;
   background: linear-gradient(-180deg, #3a3a3a, rgba(0, 0, 0, 0));
@@ -254,21 +287,29 @@ body main section .container form .row .div_hr {
   height: 1px;
 }
 
-body main section .container form div .div_hover input[type=submit] {
-  width: 194px;
-  height: 56px;
-  font-size: 18px;
-  background-color: #0099A8;
-  transition: 0.3s;
+body main section .container form div .button_form input[type=submit] {
+  background-color: transparent;
+  width: calc(1.4 * var(--width));
+  height: calc(0.7 * var(--height));
+  z-index: 3;
 }
 
-body main section .container form div .div_hover input[type=submit]:hover {
-  background-color: black;
+body main section .container form div .button_form {
+  width: calc(1.4 * var(--width)) !important;
+  height: calc(0.7 * var(--height)) !important;
+}
+body main section .container form div .button_form:hover .back {
+  width: calc(3.5 * var(--width)) !important;
+  height: calc(3.5 * var(--height)) !important;
 }
 
-.ul_footer {
+body main section .container .row div .ul_footer {
   color: #0099A8;
   font-size: 16px;
+}
+
+body main section .container .row div .ul_footer li a .icon_hover:hover {
+  color: black;
 }
 
 @media (max-width: 990px) {

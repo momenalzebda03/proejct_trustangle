@@ -22,6 +22,44 @@ body {
     line-height: 29px;
 }
 
+:root {
+    --width: 139px;
+    --height: 78px;
+}
+
+.button {
+    width: calc(0.8 * var(--width));
+    height: calc(0.7 * var(--height));
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0, 0.22, .3, 1);
+
+    span {
+        z-index: 10;
+    }
+
+    &._3 {
+        background: $color_navbar_button;
+    }
+
+    .back {
+        width: 0;
+        height: 0;
+        filter: url(#filter);
+        transition: all 2.5s cubic-bezier(0.1, 0.22, .3, 1);
+    }
+
+    &._3 .back {
+        left: -50%;
+        bottom: -50%;
+        background: $color_black;
+    }
+
+    &:hover .back {
+        width: calc(2 * var(--width));
+        height: calc(2 * var(--height));
+    }
+}
+
 // end everything
 // start navbar
 body .section_navbar {
@@ -219,7 +257,7 @@ body main section .container .div_check {
 }
 
 // end check
-// start form condition
+// start form
 body main section .container form .row div div input,
 body main section .container form .row div div textarea {
     cursor: pointer;
@@ -268,23 +306,32 @@ body main section .container form .row .div_hr {
     height: 1px;
 }
 
-body main section .container form div .div_hover input[type=submit] {
-    width: 194px;
-    height: 56px;
-    font-size: 18px;
-    background-color: $color_navbar_button;
-    transition: 0.3s;
+body main section .container form div .button_form input[type=submit] {
+    background-color: transparent;
+    width: calc(1.4 * var(--width));
+    height: calc(0.7 * var(--height));
+    z-index: 3;
 }
 
-body main section .container form div .div_hover input[type=submit]:hover {
-    background-color: $color_black;
+body main section .container form div .button_form {
+    width: calc(1.4 * var(--width)) !important;
+    height: calc(0.7 * var(--height)) !important;
+
+    &:hover .back {
+        width: calc(3.5 * var(--width)) !important;
+        height: calc(3.5 * var(--height)) !important;
+    }
 }
 
-// end form condition
+// end form
 // start footer
-.ul_footer {
+body main section .container .row div .ul_footer {
     color: $color_navbar_button;
     font-size: $text_navbar;
+}
+
+body main section .container .row div .ul_footer li a .icon_hover:hover {
+    color: $color_black;
 }
 
 // end footer

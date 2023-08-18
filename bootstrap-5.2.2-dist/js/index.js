@@ -5,6 +5,10 @@ var text_hover = document.querySelectorAll("#text_hover");
 var image_scroll = document.getElementById("image_scroll");
 var button_language = document.getElementById("button_language");
 var menu = document.getElementById("menu");
+const input = document.querySelectorAll(
+  'input[type="text"], textarea, input[type="email"], input[type="number"]'
+);
+
 var boolen = true;
 for (let i = 0; i < tag_header.length; i++) {
   var chekd = tag_header[i];
@@ -57,3 +61,16 @@ var time_clear = setInterval(() => {
     : (id_text.textContent += text[i]);
   i++;
 }, 100);
+
+input.forEach((element) => {
+  const placeholderStar = element.nextElementSibling;
+  element.addEventListener("input", () => {
+    const inputValue = element.value;
+    const valueLength = inputValue.length;
+    if (valueLength >= 1) {
+      placeholderStar.style.display = "none";
+    } else {
+      placeholderStar.style.display = "block";
+    }
+  });
+});
