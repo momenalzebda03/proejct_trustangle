@@ -6,6 +6,10 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.body_arap {
+    direction: rtl;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -163,6 +167,10 @@ body .section_main .container .row div div div .link_div::after {
     opacity: 0;
 }
 
+body .section_main .container .row div div div .link_div_arap::after {
+    content: "إبداء من هنا" !important;
+}
+
 body .section_main .container .row div div .button_start:hover .link_div::after {
     width: 100%;
     height: 100%;
@@ -289,6 +297,15 @@ body main section .container form .row div div .placeholder_star {
 body main section .container form .row div div .placeholder_star_text {
     top: 10%;
     left: 15px;
+}
+
+body main section .container form .row div div .placeholder_star_arap_text {
+    top: 10%;
+    right: 15px;
+}
+
+body main section .container form .row div div .placeholder_star_arap {
+    right: 15px !important;
 }
 
 body main section .container form .row div div .span_red {
