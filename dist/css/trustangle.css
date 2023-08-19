@@ -308,6 +308,10 @@ body main section .container .row div .ul_footer {
   font-size: 16px;
 }
 
+body main section .container .row div .ul_footer li a .icon_hover {
+  color: #0099A8;
+}
+
 body main section .container .row div .ul_footer li a .icon_hover:hover {
   color: black;
 }
@@ -367,4 +371,4 @@ body main section .container .row div .ul_footer li a .icon_hover:hover {
   body .section_main .container .row div div div .title_size_tow {
     font-size: 25px;
   }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=trustangle.css.map */

@@ -330,6 +330,10 @@ body main section .container .row div .ul_footer {
     font-size: $text_navbar;
 }
 
+body main section .container .row div .ul_footer li a .icon_hover {
+    color: $color_navbar_button;
+}
+
 body main section .container .row div .ul_footer li a .icon_hover:hover {
     color: $color_black;
 }
