@@ -199,16 +199,16 @@ body .section_main .section_main_scroll_button {
 
 // end main
 // start card
-body main section .container .div_card:nth-child(odd) {
+body main .container .div_card:nth-child(odd) {
     background-color: $color_card_coupons;
 }
 
-body main section .container .div_card:nth-child(even) {
+body main .container .div_card:nth-child(even) {
     background-color: $color_card_certified;
     flex-direction: row-reverse;
 }
 
-body main section .container .div_card::before {
+body main .container .div_card::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -217,39 +217,39 @@ body main section .container .div_card::before {
     height: 70px;
 }
 
-body main section .container .div_card:nth-child(odd)::before {
+body main .container .div_card:nth-child(odd)::before {
     left: -35px;
     transform: skewX(45deg);
 }
 
-body main section .container .div_card:nth-child(even)::before {
+body main .container .div_card:nth-child(even)::before {
     right: -35px;
     transform: skewX(-45deg);
 }
 
-body main section .container .div_card div div .image_hover {
+body main .container .div_card div div .image_hover {
     transition: transform 0.5s ease-in-out;
 }
 
-body main section .container .div_card:hover .image_hover {
+body main .container .div_card:hover .image_hover {
     transform: scale(1.1);
 }
 
-body main section .container .div_card:nth-child(2) .image_hover_block,
-body main section .container .div_card:nth-child(2) .image_hover_none {
+body main .container .div_card:nth-child(2) .image_hover_block,
+body main .container .div_card:nth-child(2) .image_hover_none {
     transition: 1s;
     transform: scale(1);
 }
 
-body main section .container .div_card:nth-child(2) .image_hover_block {
+body main .container .div_card:nth-child(2) .image_hover_block {
     opacity: 0;
 }
 
-body main section .container .div_card:nth-child(2):hover .image_hover_block {
+body main .container .div_card:nth-child(2):hover .image_hover_block {
     opacity: 1;
 }
 
-body main section .container .div_card:nth-child(2):hover .image_hover_none {
+body main .container .div_card:nth-child(2):hover .image_hover_none {
     opacity: 0;
 }
 
@@ -339,19 +339,18 @@ body main section .container form div .button_form {
         height: calc(3.5 * var(--height)) !important;
     }
 }
-
 // end form
 // start footer
-body main section .container .row div .ul_footer {
+body main footer .container .row div .ul_footer {
     color: $color_navbar_button;
     font-size: $text_navbar;
 }
 
-body main section .container .row div .ul_footer li a .icon_hover {
+body main footer .container .row div .ul_footer li a .icon_hover {
     color: $color_navbar_button;
 }
 
-body main section .container .row div .ul_footer li a .icon_hover:hover {
+body main footer .container .row div .ul_footer li a .icon_hover:hover {
     color: $color_black;
 }
 
