@@ -52,26 +52,6 @@ window.onscroll = function () {
   }
 };
 
-var text = "Welcome to trustangle’ s referral program!";
-var id_text = document.getElementById("id_text");
-var i = 0;
-var time_clear = setInterval(() => {
-  i > text.length - 1
-    ? clearInterval(time_clear)
-    : (id_text.textContent += text[i]);
-  i++;
-}, 100);
-
-var text_arap = "مرحباً بك في برنامج الإحالة الخاص بـترست اننجل!";
-var id_text_arap = document.getElementById("text_arap");
-var i = 0;
-var time_clear_arap = setInterval(() => {
-  i > text_arap.length - 1
-    ? clearInterval(time_clear_arap)
-    : (id_text_arap.textContent += text_arap[i]);
-  i++;
-}, 100);
-
 input.forEach((element) => {
   const placeholderStar = element.nextElementSibling;
   element.addEventListener("input", () => {
